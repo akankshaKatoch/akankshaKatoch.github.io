@@ -1380,6 +1380,21 @@ input, select, textarea {
 		}
 
 /* Multi-use */
+	.bullet-list li {
+		padding: 0.2em 0 0.2em 0;
+		background: url("images/Bullet.png") 0px 1.05em no-repeat;
+	}
+		.bullet-list li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.bullet-list li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+
 
 	.link-list li {
 		padding: 0.2em 0 0.2em 0;
@@ -1444,7 +1459,25 @@ input, select, textarea {
 			border-bottom: 0 !important;
 		}
 
-	.feature-image {
+	.check-list2 li {
+		padding: 0.7em 0 0.7em 45px;
+		font-size: 1.2em;
+		background: url("images/Bullet.png") 0px 1.05em no-repeat;
+	}
+
+		.check-list2 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list2 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+
+
+.feature-image {
 		display: block;
 		margin: 0 0 2em 0;
 		outline: 0;
@@ -1648,6 +1681,10 @@ input, select, textarea {
 			border-bottom: solid 1px #e2e6e8;
 		}
 
+		#content .check-list2 li {
+			border-bottom: solid 1px #e2e6e8;
+		}
+
 /* Footer */
 
 	#footer {
@@ -1681,6 +1718,10 @@ input, select, textarea {
 			border-top: solid 1px #e0e4e6;
 			border-bottom: solid 1px #b5bec3;
 		}
+		#footer .check-list2 li {
+			border-top: solid 1px #e0e4e6;
+			border-bottom: solid 1px #b5bec3;
+		}
 
 /* Copyright */
 
@@ -1704,6 +1745,11 @@ input, select, textarea {
 		/* Multi-use */
 
 			.check-list li {
+				font-size: 1em;
+				line-height: 2em;
+			}
+
+			.check-list2 li {
 				font-size: 1em;
 				line-height: 2em;
 			}
@@ -1975,6 +2021,10 @@ input, select, textarea {
 			}
 
 			.check-list li {
+				font-size: 1em;
+			}
+
+			.check-list2 li {
 				font-size: 1em;
 			}
 
