@@ -2,24 +2,28 @@
 <html>
 
 <head>
+	
 	<title>Akanksha Katoch — Software Engineer (Backend • Cloud)</title>
-	<meta name="description" content="Software engineer with 9+ years building scalable backends in finance, banking, and healthcare. MS (UT Dallas). Ex-RSA Security.">
-	<link rel="canonical" href="https://akankshakatoch.github.io/">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/custom.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-	<meta property="og:type" content="website">
-<meta property="og:title" content="Akanksha Katoch — Software Engineer">
-<meta property="og:description" content="Backend & cloud engineer. MS UTD. Ex-RSA Security.">
-<meta property="og:url" content="https://akankshakatoch.github.io/">
-<meta property="og:image" content="https://akankshakatoch.github.io/images/og-card.png">
+	<meta name="description" content="Software engineer building scalable, reliable backends. MS (UT Dallas). Ex-RSA Security (fraud & risk).">
+	<link rel="canonical" href="https://akankshakatoch.github.io/">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Akanksha Katoch — Software Engineer">
-<meta name="twitter:description" content="Backend & cloud engineer. MS UTD. Ex-RSA Security.">
-<meta name="twitter:image" content="https://akankshakatoch.github.io/images/og-card.png">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Akanksha Katoch — Software Engineer">
+	<meta property="og:description" content="Backend & cloud engineer. MS UTD. Ex-RSA Security.">
+	<meta property="og:url" content="https://akankshakatoch.github.io/">
+	<meta property="og:image" content="https://akankshakatoch.github.io/images/og-card.png">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Akanksha Katoch — Software Engineer">
+	<meta name="twitter:description" content="Backend & cloud engineer. MS UTD. Ex-RSA Security.">
+	<meta name="twitter:image" content="https://akankshakatoch.github.io/images/og-card.png">
 </head>
 
 <body class="is-preload">
@@ -268,9 +272,6 @@
 							<a href="https://github.com/akankshaKatoch/task-management-rest-spring" class="image"><img src="images/TaskManagement.jpg" alt="" /></a>
 							<div class="inner">
 								<h4><a href="https://github.com/akankshaKatoch/task-management-rest-spring">Task Management Application</a></h4>
-								
-
-
 								<p>A Task Management REST API built using Spring Boot, designed to handle the creation, 
 									assignment, tracking, and completion of tasks. This project demonstrates clean architecture, 
 									CRUD operations, layered service design, and 
@@ -315,13 +316,56 @@
 				</div>
 			</section>
 
+			<!--
+<section id="three">
+				<div class="container">
+					<h3>Projects</h3>
+					<div class="features">
+						<p class="section-muted">Case-study style: problem → approach → impact. Use the filter to scan.</p>
+<input id="project-filter" class="filter-input" placeholder="Filter: java, spring, aws, cache, scheduler..." aria-label="Filter projects">
+
+<div id="project-grid" class="project-grid">
+  <article class="project-card" data-tags="java spring rest junit h2">
+    <h3>Task Management API</h3>
+    <div class="tags">Java • Spring Boot • REST • JUnit • H2</div>
+    <p><strong>Problem:</strong> Teams needed CRUD, assignment, and audit trail with clean contracts.</p>
+    <p><strong>Approach:</strong> Controller→Service→Repository, DTO validation, global error handler, H2 test profile, CI.</p>
+    <p><strong>Impact:</strong> Faster iteration; straightforward UI handoff.</p>
+    <p>
+      <a href="https://github.com/akankshaKatoch/task-management-rest-spring" class="button small" target="_blank" rel="noopener">Code</a>
+    </p>
+  </article>
+
+  <article class="project-card" data-tags="java concurrency cache lru design">
+    <h3>Thread-Safe LRU Cache</h3>
+    <div class="tags">Java • Concurrency • Design</div>
+    <p><strong>Problem:</strong> O(1) get/put with predictable eviction under concurrency.</p>
+    <p><strong>Approach:</strong> HashMap + doubly-linked list, striped locks, eviction tests.</p>
+    <p><strong>Impact:</strong> Reliable cache primitive; interview-ready LLD.</p>
+    <p><a href="#" class="button small" aria-disabled="true">Code (add link)</a></p>
+  </article>
+
+  <article class="project-card" data-tags="python scheduler backoff queue">
+    <h3>Job Scheduler with Retries</h3>
+    <div class="tags">Python • Scheduling • Backoff</div>
+    <p><strong>Problem:</strong> Run delayed jobs with ordering, retries, DLQ.</p>
+    <p><strong>Approach:</strong> Min-heap by due-time, worker pool, exponential backoff, DLQ interface.</p>
+    <p><strong>Impact:</strong> Robust async building block; simplified recovery.</p>
+    <p><a href="#" class="button small" aria-disabled="true">Code (add link)</a></p>
+  </article>
+</div>
+		
+					</div>
+				</div>
+			</section> -->
+
 			<section id="five">
 				<div class="container">
 					<h3>Blogs</h3>
 
 					<section>
-						<h4>I love writing articles and short todo docs for problems I face during coding or while making
-							projects: </h4>
+						<p class="section-muted">
+  							I love writing short articles and to-do docs for problems I face while coding or building projects.</p>
 					
 						<hr />
 						<header>
@@ -379,6 +423,21 @@
 				<script src="assets/js/breakpoints.min.js"></script>
 				<script src="assets/js/util.js"></script>
 				<script src="assets/js/main.js"></script>
+				<script>
+				(function(){
+					const q = document.getElementById('project-filter');
+					if (!q) return;
+					const cards = Array.from(document.querySelectorAll('#project-grid .project-card'));
+					q.addEventListener('input', e => {
+					const s = e.target.value.trim().toLowerCase();
+					cards.forEach(c => {
+						const hay = (c.textContent + " " + (c.getAttribute('data-tags')||'')).toLowerCase();
+						c.style.display = hay.includes(s) ? '' : 'none';
+					});
+					});
+				})();
+				</script>
+
 
 </body>
 

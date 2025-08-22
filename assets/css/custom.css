@@ -1,0 +1,13 @@
+:root{
+  --border:#e5e7eb; --fg:#0b1320; --muted:#4b5563; --card:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --border:#1f2937; --fg:#e6eef9; --muted:#9fb3c8; --card:#0f1620; }
+}
+.section-muted { color: var(--muted); }
+.project-grid { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+.project-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:1rem; }
+.project-card h3 { margin:.25rem 0 .5rem; font-size:1.1rem; }
+.tags { font-size:.85rem; color:var(--muted); margin-bottom:.5rem; }
+.actions.inline a.button { margin-right:.5rem; margin-bottom:.5rem; }
+.filter-input { width:100%; padding:.65rem .8rem; border:1px solid var(--border); border-radius:12px; }
